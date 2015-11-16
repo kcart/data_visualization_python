@@ -45,12 +45,13 @@ def visual_type():
 	"""Visualize data by ategory in bar graph"""
 
 	data_file = parse(MY_FILE, ",")
+	
 	counter = Counter(item["Disease"] for item in data_file)
 
 	labels = tuple(counter.keys())
 
-	xlocations = np.arange(len(labels)) + 0.5
-
+	xlocations = range(0, 4225, 65)
+	
 	width = 0.5
 
 
